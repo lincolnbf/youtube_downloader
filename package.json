@@ -1,0 +1,22 @@
+{
+  "name": "youtube_downloader",
+  "version": "1.0.0",
+  "description": "Youtube Video Downloader",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lincolnbf/youtube_downloader.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lincolnbf/youtube_downloader/issues"
+  },
+  "homepage": "https://github.com/lincolnbf/youtube_downloader#readme",
+  "dependencies": {
+    "ytdl-core": "^4.11.0"
+  }
+}
