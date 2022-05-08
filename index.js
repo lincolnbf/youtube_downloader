@@ -32,6 +32,9 @@ init = async () => {
       format: "mp4",
     });
 
+    const currentVideoInfo = await ytdl.getBasicInfo(video);
+    console.log("Downloading...", currentVideoInfo.videoDetails.title);
+
     currentVideo
       .addListener("end", () => endedVideoListener(index))
       .addListener("error", () => errorVideoListener(index))
