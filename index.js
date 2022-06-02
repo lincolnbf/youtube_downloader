@@ -1,7 +1,7 @@
 const fs = require("fs");
 const ytdl = require("ytdl-core");
 const ffmpeg = require("ffmpeg-static");
-const VIDEO_PATH = "test_videos";
+const VIDEO_PATH = "video_urls";
 const cp = require("child_process");
 
 const tracker = {
@@ -14,7 +14,13 @@ const tracker = {
 getVideoUrlArr = async () => {
   return new Promise((resolve, reject) => {
     fs.readFile(VIDEO_PATH, "utf8", (_, data) => {
-      resolve(data.split("\n"));
+      const breaked = data.split("\n");
+      if (breaked[breaked.length - 1] === "") {
+        breaked.pop();
+        resolve(breaked);
+      } else {
+        resolve(breaked);
+      }
     });
   });
 };
